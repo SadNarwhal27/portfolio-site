@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap');
+
+$colors: (
+    nav-color: #6700EE,
+    primary-color: #6E00FF,
+    nav-accent-color: #00EEFF,
+    skills-color: #FF64CB,
+    text-color: #252525
+);
+
+/* Creates the blank slate for you to work with later */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+
+.nav-container, .nav-bottom {
+    background-color: map-get($map: $colors, $key: nav-color);
+
+    a {
+        color: white;
+    }
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+    .logo {
+        color: map-get($map: $colors, $key: nav-accent-color);
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+}
+
+.social-header, .hero-design {
+    display: none;
+}
+
+.hero {
+    background: map-get($map: $colors, $key: primary-color);
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+
+.meet {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    font-weight: bold;
+    color: map-get($map: $colors, $key: skills-color);
+    padding-left: 3em;
+}
+
+.scroll {
+    width: 30px;
+    margin-top: 2em;
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+/* Makes the circle near the featured project */
+.featured {
+    position: relative;
+}
+.featured::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba($color: map-get($colors, primary-color), $alpha: 0.23);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: map-get($colors, primary-color);
+    letter-spacing: 0.2em;
+    font-size: 0.85em;
+}
+
+.featured-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: -0.4em;
+    display: block;
+}
+
+.featured-desc {
+    color: map-get($map: $colors, $key: text-color);
+    margin-bottom: 3em;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    font-weight: 500;
+}
+
+.skills {
+    /*background: map-get($map: $colors, $key: nav-accent-color);*/
+    background: black;
+}
+
+.skills-container ul li {
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    .icon-container {
+        height: 100px;
+        width: 100px;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+
+        /* If you make icons that are different sizes in the future use &.one, &.two, &.three */
+    }
+}
+
+.skill-title {
+    font-weight: bold;
+}
+
+.featured-desc {
+    margin-bottom: 2em;
+}
+
+.portfolio {
+    background: white;
+}
+
+.portfolio-container a img {
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+/* Tablet View */
+@media only screen and (min-width: 800px) {
+
+    .featured, .portfolio {
+        text-align: left;
+    }
+
+    .featured, .portfolio-container {
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+
+    .left, .portfolio-left {
+        display: grid;
+        place-content: center;
+    }
+    .right {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .skills {
+        margin-top: -5em;
+        margin-bottom: -7em;
+        padding-top: 7em;
+    }
+
+    .skills-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1em;
+    }
+
+    .portfolio {
+        padding-top: 7em;
+    }
+
+    .portfolio-container {
+        margin-left: 2em;
+    }
+
+}
+
+@media only screen and (min-width: 1050px) {
+
+    .hero {
+        height: 90vh;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+
+        header, footer {
+            background: map-get($map: $colors, $key: nav-color);
+        }
+    }
+
+    header {
+        padding: 2em 2em 2em 4em;
+    }
+
+    .social-header {
+        padding: 2em 4em 2em 0;
+    }
+
+    section {
+        padding: 4em;
+    }
+
+    .social-header {
+        display: block;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 5em;
+            float: right;
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+
+    .hero {
+        display: gird;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            background: map-get($map: $colors, $key: primary-color);
+            padding: 6em 8em 6em 4em;
+            text-align: left;
+
+            h1 {
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+        }
+    }
+
+    .meet {
+        margin: unset;
+        padding-left: 0;
+    }
+
+    .hero-design {
+        display: unset;
+        margin-left: -50%;
+        margin-top: 15%;
+        width: 100%;
+    }
+
+    .portfolio img {
+        float: right;
+        max-width: 500px;
+    }
+
+}
+
+@media only screen and (min-width: 1250px) {
+
+    header {
+        padding: 2em 2em 2em 10em;
+    }
+
+    .social-header {
+        padding: 2em 10em 2em 0;
+    }
+
+    section {
+        padding: 10em 10em 4em 10em;
+    }
+
+    .hero .content {
+        padding: 6em 8em 6em 10em;
+    }
+
+}
+
+@media only screen and (min-width: 1550px) {
+
+    header {
+        padding: 2em 2em 2em 20em;
+    }
+
+    .social-header {
+        padding: 2em 20em 2em 0;
+    }
+
+    section {
+        padding: 6em 20em 4em 20em;
+    }
+
+    .hero .content {
+        padding: 9em 20em 6em 20em;
+    }
+
+}

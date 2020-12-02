@@ -126,8 +126,8 @@ section {
 }
 
 .skills {
-    /*background: map-get($map: $colors, $key: nav-accent-color);*/
-    background: black;
+    background: map-get($map: $colors, $key: nav-color);
+    /*background: #0892d0;*/
 }
 
 .skills-container ul li {
@@ -210,7 +210,7 @@ section {
 @media only screen and (min-width: 1050px) {
 
     .hero {
-        height: 90vh;
+        height: 95vh;
     }
 
     .nav-container {
@@ -287,6 +287,7 @@ section {
 
 }
 
+/* Desktop View */
 @media only screen and (min-width: 1250px) {
 
     header {
@@ -325,4 +326,18 @@ section {
         padding: 9em 20em 6em 20em;
     }
 
+}
+
+/* Animation for scroll thing */
+.circle {
+    animation: circleAnim 1s infinite alternate-reverse;
+}
+@keyframes circleAnim {
+    from {
+        transform: translate(264px, 706px);
+        z-index: 5;
+    }
+    to {
+        transform: translate(264px, 736px);
+    }
 }

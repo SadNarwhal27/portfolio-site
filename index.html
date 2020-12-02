@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travis Schall</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index/main.css">
 </head>
 <body>
     
-    <div class="nav-container">
+    <div class="nav-container top">
         <header>
 
             <a href="index.html" class="logo">Travis Schall</a>
 
             <nav>
                 <ul>
-                    <li><a href="#">My Work</a></li>
-                    <li><a href="#">My Skills</a></li>
+                    <li><a href=#my-work>My Work</a></li>
+                    <li><a href=#my-skills>My Skills</a></li>
                     <li><a href="#">Hire Me</a></li>
                 </ul>
             </nav>
 
         </header>
 
-        <div class="social-header">
+        <div class="social-header top">
 
             <ul>
-                <li><a href="#"></a><img src="images/linkedin.png" alt="LinkedIn Logo"></li>
-                <li><a href="#"></a><img src="images/github.png" alt="GitHub Logo"></li>
+                <li><a href="https://www.linkedin.com/in/travis-schall-3570b6160/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn Logo"></a></li>
+                <li><a href="https://github.com/SadNarwhal27" target="_blank"><img src="images/github.png" alt="GitHub Logo"></a></li>
             </ul>
 
         </div>
@@ -35,24 +35,24 @@
 
     <div class="hero">
 
-        <div class="content">
+        <div class="content top">
 
-            <h1>Creatively Crafted Code</h1>
+            <h1 class="stagger1">Creatively Crafted Code</h1>
 
-            <div class="meet">
+            <div class="meet stagger1">
 
                 <p>Meet Travis Schall</p>
 
             </div>
 
             <!--For the scroll bar thing at the top of the screen-->
-            <svg class="scroll" width="44" height="77" viewBox="0 0 44 77">
+            <svg class="scroll stagger1" width="44" height="77" viewBox="0 0 44 77">
                 <g id="scroll" transform="translate(-255 -696)">
                     <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(255 696)" fill="none" stroke="#fff" stroke-width="6">
                     <rect width="44" height="77" rx="22" stroke="none"/>
                     <rect x="3" y="3" width="38" height="71" rx="19" fill="none"/>
                     </g>
-                    <circle id="Ellipse_1" data-name="Ellipse 1" cx="13" cy="13" r="13" transform="translate(264 706)" fill="#fff"/>
+                    <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="13" cy="13" r="13" transform="translate(264 706)" fill="#fff"/>
                 </g>
             </svg>
         </div>
@@ -73,7 +73,7 @@
         
     </div>
 
-    <section class="featured">
+    <section class="featured"  id="my-work">
 
         <div class="left">
 
@@ -92,7 +92,7 @@
 
     </section>
 
-    <section class="skills">
+    <section class="skills" id="my-skills">
 
         <div class="skills-container">
 
@@ -190,13 +190,75 @@
 
                 <nav>
                     <ul>
-                        <li><a href="#">My Work</a></li>
-                        <li><a href="#">My Skills</a></li>
+                        <li><a href=#my-work>My Work</a></li>
+                        <li><a href=#my-skills>My Skills</a></li>
                         <li><a href="#">Hire Me</a></li>
                     </ul>
                 </nav>
 
         </footer>
     </div>
+
+    <!--Imported scripts for Animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+
+    <!--Script for animating the page contents-->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        var tl = gsap.timeline();
+
+        tl.from('.top', {
+            y: '-30%',
+            opacity: 0,
+            duration: 2,
+            ease: Power4.easeOut
+        })
+
+        tl.from('.stagger1', {
+            opacity: 0,
+            y: -50,
+            stagger: 0.3,
+            ease: Power4.easeOut,
+            duration: 2
+        }, "-=1.5")
+
+        tl.from('.hero-design', {
+            opacity: 0,
+            y: 50,
+            ease: Power4.easeOut,
+            duration: 1
+        }, "-=2")
+
+        gsap.from(".square-anim", {
+            stagger: 0.2,
+            scale: 0.1,
+            duration: 1,
+            ease: Back.easeOut.config(1.7)
+        })
+
+        gsap.from(".transition2", {
+            scrollTrigger: {
+                trigger: '.transition2',
+                start: "top bottom"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.3
+        })
+
+        gsap.from(".transition3", {
+            scrollTrigger: {
+                trigger: '.transition3',
+                start: "top center"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.6
+        })
+    </script>
+
 </body>
 </html>

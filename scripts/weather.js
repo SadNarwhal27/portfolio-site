@@ -54,7 +54,7 @@ function displayResults(weather) {
     humidity.innerText = `${weather.main.humidity}%`
 
     let wind = document.querySelector('.wind-speed');
-    wind.innerText = `${Math.round(weather.wind.speed)} mph`;
+    wind.innerText = `${Math.round(weather.wind.speed)}`;
 
     let feels = document.querySelector('.feels-like');
     feels.innerText = `${Math.round(weather.main.feels_like)}°F`

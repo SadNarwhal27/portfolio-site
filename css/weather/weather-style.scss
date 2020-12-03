@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap');
+
+$colors: (
+    nav-color: #6700EE
+);
+
+/* Base styling for Nav Bar */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.nav-container {
+    background-color: map-get($map: $colors, $key: nav-color);
+
+    a {
+        color: white;
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+    .logo {
+        color: map-get($map: $colors, $key: nav-accent-color);
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+}
+
+/* Styling for the Weather App */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    margin: 0;
+    padding: 0;
+
+    // I need to fix the sizing for responsiveness
+    main {
+        max-width: 90%;
+        width: 1200px;
+        background-color: white;
+        box-shadow: 0 5px 10px black;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .current {
+        padding: 40px;
+        margin-top: 50px;
+
+        .general-information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+
+            .weather {
+                font-size: 2.8rem;
+                font-weight: bold;
+            }
+
+            .city {
+                font-size: 1.5rem;
+                font-weight: normal;
+                margin-top: 6px;
+            }
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .detail {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-basis: 0;
+                flex-grow: 1;
+                padding: 10px 8px;
+
+                .title {
+                    font-size: 1.2rem;
+                    flex-grow: 1;
+                    font-weight: bold;
+                    color: #777;
+                }
+
+                .value {
+                    font-size: 2rem;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    
+    .icon-trim {
+        background-color: #222;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .icon-container {
+            position: relative;
+            top: 80px;
+            padding: 20px;
+            background-color: white;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            align-content: center;
+    
+            img {
+                position: absolute;
+                right: -20px;
+                bottom: -20px;
+            }
+        }
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+
+        .search-box {
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            outline: none;
+            border: 1px solid #777;
+            border-radius: 5px;
+            padding: 10px 15px;
+            width: 75%;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #333;
+}
+
+.pac-item {
+    font-size: 1.5rem;
+    padding: 10px 10px;
+}
+
+.pac-icon {
+    display: none;
+}
+
+.pac-item-query {
+    font-size: 1.5rem;
+    padding-right: 14px;
+}

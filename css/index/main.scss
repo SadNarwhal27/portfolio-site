@@ -125,6 +125,11 @@ section {
     font-weight: 500;
 }
 
+.right {
+    box-shadow: 0 5px 10px black;
+    border-radius: 5px;
+}
+
 .skills {
     background: map-get($map: $colors, $key: nav-color);
     /*background: #0892d0;*/

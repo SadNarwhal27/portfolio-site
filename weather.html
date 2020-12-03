@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/weather/weather-style.css">
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiSsPGR0x70-RaaWD3QTvv4uBD9NkTc6A&libraries=places&callback=initMap"></script>
+    <!--
+        Imports current weather from OpenWeather
+    <script defer src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=c97c24a201543b1ae896494ed99f045b"></script>
+    -->
+
+    <script defer src="scripts/weather.js"></script>
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div class="nav-container top">
+        <header>
+
+            <a href="index.html" class="logo">Travis Schall</a>
+
+            <nav>
+                <ul>
+                    <li><a href="http://travisschall.com/index.html#my-work">My Work</a></li>
+                    <li><a href="http://travisschall.com/index.html#my-skills">My Skills</a></li>
+                    <li><a href="#">Hire Me</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+    <div class="app-container">
+        <main>
+
+            <section class="icon-trim">
+                <div class="icon-container">
+                    <img class = "icon" id=weather-icon src="http://openweathermap.org/img/wn/10d@4x.png" alt="">
+                </div>
+            </section>
+
+            <section class="current">
+                <div class="general-information">
+                    <div class="weather">Enter a Location</div>
+
+                    <div class="city">To Find The Weather</div>
+                </div>
+
+                <div class="details">
+                    
+                    <div class="detail">
+                        <div class="title">Temperature</div>
+                        <div class="value temp">TBD</div>
+                    </div>
+
+                    <div class="detail bordered">
+                        <div class="title">Today's Low</div>
+                        <div class="value low">TBD</div>
+                    </div>
+
+                    <div class="detail">
+                        <div class="title">Today's High</div>
+                        <div class="value high">TBD</div>
+                    </div>
+
+                </div>
+                <div class="details bottom-row">
+                    
+                    <div class="detail">
+                        <div class="title">Feels Like</div>
+                        <div class="value feels-like">TBD</div>
+                    </div>
+
+                    <div class="detail bordered">
+                        <div class="title">Wind Speed</div>
+                        <div class="value wind-speed">TBD</div>
+                    </div>
+
+                    <div class="detail">
+                        <div class="title">Humidity</div>
+                        <div class="value humidity">TBD</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="search-container">
+                <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <a href="https://openweathermap.org/" target="_blank">Powered By OpenWeather</a>
+    </footer>
+
+</body>
+</html>

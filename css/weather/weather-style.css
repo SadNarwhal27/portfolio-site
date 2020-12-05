@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
 /* Base styling for Nav Bar */
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), color-stop(#6DD5FA), to(#2980B9));
+  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);
 }
 
 ul {
@@ -17,14 +19,10 @@ a {
 }
 
 .nav-container {
-  background-color: #6700EE;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
-.nav-container a {
-  color: white;
-}
-
-header {
+.nav-container header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,19 +32,21 @@ header {
   padding: 2em;
 }
 
-header .logo {
+.nav-container header .logo {
+  color: rgba(255, 255, 255, 0.6);
   font-weight: bold;
 }
 
-header ul {
+.nav-container header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header ul a {
+.nav-container header ul a {
   display: block;
   padding: 0 1em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Styling for the Weather App */
@@ -67,8 +67,7 @@ header ul a {
 
 .app-container main {
   max-width: 90%;
-  width: 1200px;
-  background-color: white;
+  width: 1000px;
   -webkit-box-shadow: 0 5px 10px black;
           box-shadow: 0 5px 10px black;
   border-bottom-left-radius: 5px;
@@ -76,8 +75,8 @@ header ul a {
 }
 
 .app-container .current {
-  padding: 40px;
-  margin-top: 50px;
+  padding: 90px 40px 40px;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .app-container .current .general-information {
@@ -92,6 +91,7 @@ header ul a {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .app-container .current .general-information .weather {
@@ -104,44 +104,28 @@ header ul a {
   font-size: 1.5rem;
   font-weight: normal;
   margin-top: 6px;
+  text-align: center;
 }
 
 .app-container .current .details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: 20px;
 }
 
 .app-container .current .details .detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 10px;
 }
 
 .app-container .current .details .detail .title {
   font-size: 1.2rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   font-weight: bold;
-  color: #777;
+  color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
@@ -152,7 +136,7 @@ header ul a {
 }
 
 .app-container .icon-trim {
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.5);
   height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,7 +155,7 @@ header ul a {
   position: relative;
   top: 80px;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.25);
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -195,25 +179,41 @@ header ul a {
 }
 
 .app-container .search-container .search-box {
-  margin-bottom: 40px;
+  margin: 40px;
   font-size: 1.5rem;
   outline: none;
   border: 1px solid #777;
   border-radius: 5px;
   padding: 10px 15px;
   width: 75%;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 footer {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: #333;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+footer a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pac-container {
+  background: rgba(255, 255, 255, 0.25);
+  max-height: 50px;
 }
 
 .pac-item {
-  font-size: 1.5rem;
-  padding: 10px 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  color: black;
 }
 
 .pac-icon {
@@ -221,7 +221,65 @@ footer {
 }
 
 .pac-item-query {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-right: 14px;
+}
+
+@media only screen and (max-width: 620px) {
+  header {
+    padding-bottom: 1em;
+  }
+  .app-container {
+    padding-top: 1em;
+  }
+  .app-container .details {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .app-container .details .detail {
+    padding: 1em 0.5em;
+  }
+  .app-container .search-box {
+    min-width: 85%;
+  }
+  .search-box {
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 625px) {
+  .details {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .details .detail {
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .detail {
+    padding: 1em 2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .detail {
+    padding: 1em 5em;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .app-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .app-container main {
+    width: 800px;
+    max-height: 25%;
+  }
+  .app-container .icon-trim {
+    height: 100px;
+  }
 }
 /*# sourceMappingURL=weather-style.css.map */

@@ -29,14 +29,11 @@ function getResponse(lat, lon) {
 function displayResults(weather) {
     let icon = document.getElementById("weather-icon");
     let site_icon = weather.weather[0].icon;
+    gradientShift(site_icon);
     icon.src = `http://openweathermap.org/img/wn/${site_icon}@4x.png`
 
     let city = document.querySelector('.city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
-
-    // let now = new Date();
-    // let date = document.querySelector('.location .date');
-    // date.innerText = dateBuilder(now);
 
     let temp = document.querySelector('.temp');
     temp.innerText = `${Math.round(weather.main.temp)}°F`
@@ -60,15 +57,10 @@ function displayResults(weather) {
     feels.innerText = `${Math.round(weather.main.feels_like)}°F`
 }
 
-// Date function for when it's needed
-function dateBuilder(d) {
-    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    let day = days[d.getDay()];
-    let month = months[d.getMonth()];
-    let date = d.getDate();
-    let year = d.getFullYear();
-
-    return `${day}, ${month} ${date} ${year}`;
+function gradientShift(icon) {
+    if (icon.includes("d")) {
+        document.body.style.background = "linear-gradient(to top, #f3904f, #3b4371)";
+    } else {
+        document.body.style.background = "linear-gradient( #355c7d, #6c5b7b, #c06c84)";
+    }
 }

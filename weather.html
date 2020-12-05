@@ -13,7 +13,7 @@
     <script defer src="scripts/weather.js"></script>
     <title>Weather App</title>
 </head>
-<body>
+<body id="site">
 
     <div class="nav-container top">
         <header>
@@ -63,9 +63,6 @@
                         <div class="title">Today's High</div>
                         <div class="value high">TBD</div>
                     </div>
-
-                </div>
-                <div class="details bottom-row">
                     
                     <div class="detail">
                         <div class="title">Currently Feels Like</div>
@@ -83,12 +80,11 @@
                     </div>
 
                 </div>
+
+                <div class="search-container">
+                    <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
+                </div>
             </section>
-
-            <div class="search-container">
-                <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city...">
-            </div>
-
         </main>
     </div>
 
@@ -105,7 +101,7 @@
         var tl = gsap.timeline();
 
         tl.from('.app-container', {
-            y: '-10%',
+            y: '-20%',
             opacity: 0,
             duration: 1,
             ease: Power4.easeOut

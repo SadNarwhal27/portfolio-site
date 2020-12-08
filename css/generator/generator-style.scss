@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap');
+
+$colors: (
+    nav-color: #6700EE,
+    primary-color: #6E00FF
+);
+
+/* Creates the blank slate for you to work with later */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: map-get($map: $colors, $key: nav-color);
+
+    a {
+        color: white;
+    }
+
+    .logo {
+        color: map-get($map: $colors, $key: nav-accent-color);
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.generator-container {
+    padding: 1em;
+    margin: 1em;
+    background-color: map-get($map: $colors, $key: primary-color);
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        grid-gap: 1em;
+        font-size: 1.2rem;
+        color: white;
+
+        span {
+            float: right;
+        }
+    }
+}
+
+.names-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    margin: 1em;
+    background: pink;
+
+    .name {
+        padding: 1em;
+    }
+}

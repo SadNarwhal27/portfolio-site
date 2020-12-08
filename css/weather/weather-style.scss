@@ -7,15 +7,11 @@ $colors: (
     nav-dark-text-color: rgba(0, 0, 0, 0.6)
 );
 
-/* Base styling for Nav Bar */
 body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); //day
-    // background: linear-gradient( #355c7d, #6c5b7b, #c06c84); //sunset
-    // background: linear-gradient(to top, #f3904f, #3b4371); //sunrise
-    // background: linear-gradient(#000428, #004e92); //Night
+    background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);
 }
 ul {
     list-style-type: none;
@@ -51,8 +47,6 @@ a {
     }
 }
 
-
-/* Styling for the Weather App */
 .app-container {
     display: flex;
     justify-content: center;
@@ -61,7 +55,6 @@ a {
     margin: 0;
     padding: 0;
 
-    // I need to fix the sizing for responsiveness
     main {
         max-width: 90%;
         width: 1000px;

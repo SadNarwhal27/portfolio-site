@@ -22,9 +22,9 @@
 
         </header>
 
-        <h1>Random Name Generator</h1>
-
         <div class="generator-container">
+            <h1>Random Name Generator</h1>
+
             <form class="generator" action="name-generator.php" autocomplete="off">
 
                 <div class="name-numbers">    
@@ -34,7 +34,7 @@
 
                 <div class="gender-select">
                     <label for="g">Pick By Gender</label>
-                    <span><select class="name-fields" name="g">
+                    <span><select name="g">
                         <option value="0" <?php if($_GET['g'] == 0) {echo 'selected=selected';} ?>>Any</option>
                         <option value="1" <?php if($_GET['g'] == 1) {echo 'selected=selected';} ?>>Masculine</option>
                         <option value="2" <?php if($_GET['g'] == 2) {echo 'selected=selected';} ?>>Femanine</option>
@@ -47,8 +47,6 @@
 
         <div class="names-container">
             <?php
-                // Remote mySQL servername: sql451.main-hosting.eu
-                // Always change back to localhost when publishing
                 $servername = "localhost";
                 $username = "u363076772_Maurice20";
                 $password = "t5K!Vyn?7Yz8";
@@ -77,7 +75,7 @@
                     } else if ($gen == 1) {
                         $g = 'm';
                     } else {
-                        $g = '%';
+                        $g = 'f';
                     }   
                 } 
 
@@ -111,6 +109,22 @@
                 mysqli_close($conn);
             ?>
         </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+
+        <!--Script for animating the page contents-->
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            var tl = gsap.timeline();
+
+            tl.from('.names-container', {
+                x: '20%',
+                opacity: 0,
+                duration: 1,
+                ease: Power4.easeOut
+            })
+        </script>
         
     </body>
 </html>

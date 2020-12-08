@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
-/* Creates the blank slate for you to work with later */
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd9b9c), to(#9e567b));
+  background-image: linear-gradient(#dd9b9c, #9e567b);
+  color: white;
 }
 
 ul {
@@ -24,7 +26,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2em;
-  background-color: #6700EE;
+  background-color: #3d325f;
 }
 
 header a {
@@ -46,14 +48,17 @@ header ul a {
   padding: 0 1em;
 }
 
-h1 {
-  text-align: center;
-}
-
 .generator-container {
   padding: 1em;
   margin: 1em;
-  background-color: #6E00FF;
+  background-color: #6f548a;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px black;
+          box-shadow: 0 5px 10px black;
+}
+
+.generator-container h1 {
+  text-align: center;
 }
 
 .generator-container form {
@@ -68,8 +73,17 @@ h1 {
       -ms-flex-align: stretch;
           align-items: stretch;
   grid-gap: 1em;
-  font-size: 1.2rem;
-  color: white;
+}
+
+.generator-container form input[type=number], .generator-container form input[type=submit], .generator-container form select {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 1.05rem;
+}
+
+.generator-container form input[type=number] {
+  width: 5.6em;
 }
 
 .generator-container form span {
@@ -83,10 +97,62 @@ h1 {
       grid-template-columns: auto auto;
   text-align: center;
   margin: 1em;
-  background: pink;
+  background: #97588d;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px black;
+          box-shadow: 0 5px 10px black;
 }
 
 .names-container .name {
   padding: 1em;
+  font-size: 1.2em;
+}
+
+@media only screen and (min-width: 750px) {
+  .generator-container {
+    margin: 2em 10em;
+    padding: 1.5em;
+  }
+  .names-container {
+    margin: 1em 2em;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .names-container .name {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .generator-container {
+    float: left;
+    margin-left: 0em;
+    margin-right: 4em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-box-shadow: -5px 5px 10px black;
+            box-shadow: -5px 5px 10px black;
+  }
+  .generator-container form span {
+    padding-left: 1em;
+  }
+  .names-container {
+    margin-right: 4em;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .names-container .name {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .names-container {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .names-container .name {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=generator-style.css.map */

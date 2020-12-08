@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
-/* Base styling for Nav Bar */
 body {
   min-height: 100vh;
   margin: 0;
@@ -49,7 +48,6 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Styling for the Weather App */
 .app-container {
   display: -webkit-box;
   display: -ms-flexbox;

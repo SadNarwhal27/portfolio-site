@@ -30,17 +30,6 @@ header .logo {
   font-weight: bold;
 }
 
-header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header ul a {
-  display: block;
-  padding: 0 1em;
-}
-
 .app-container {
   display: -ms-grid;
   display: grid;
@@ -81,34 +70,9 @@ header ul a {
   font-size: 1.2rem;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 2em;
-  background: lightgray;
-}
-
-footer .menu-text {
-  font-weight: bold;
-}
-
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 2em;
-}
-
-footer ul a {
-  display: block;
-  padding: 0 1em;
+@media only screen and (max-width: 400px) {
+  .app-container {
+    max-width: 80%;
+  }
 }
 /*# sourceMappingURL=copart-calculator-style.css.map */

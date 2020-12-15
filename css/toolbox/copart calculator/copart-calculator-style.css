@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  background: lightgray;
+}
+
+header .logo {
+  font-weight: bold;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul a {
+  display: block;
+  padding: 0 1em;
+}
+
+.app-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1f)[auto];
+      grid-template-rows: repeat(auto, 1f);
+  text-align: center;
+  background: lightblue;
+  margin: 10% auto;
+  max-width: 60%;
+  max-height: 50%;
+}
+
+.app-container h1 {
+  margin-bottom: 0;
+}
+
+.app-container h1 a {
+  color: black;
+}
+
+.app-container p {
+  padding: 1em;
+}
+
+.app-container label {
+  font-size: 1.2rem;
+}
+
+.app-container input {
+  max-width: 25%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.app-container span {
+  padding-bottom: 1em;
+  font-size: 1.2rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  background: lightgray;
+}
+
+footer .menu-text {
+  font-weight: bold;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 2em;
+}
+
+footer ul a {
+  display: block;
+  padding: 0 1em;
+}
+/*# sourceMappingURL=copart-calculator-style.css.map */

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/toolbox/copart calculator/copart-calculator-style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython.min.js"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython_stdlib.js"> </script>
+    <title>Copart Calculator</title>
+</head>
+<body onload="brython()">
+
+    <div class="nav-container top">
+        <header>
+
+            <a href="/index.html" class="logo">Travis Schall</a>
+
+            <nav>
+                <ul>
+                    <li><a href="https://travisschall.com/index.html#my-work">My Work</a></li>
+                    <li><a href="https://travisschall.com/index.html#my-skills">My Skills</a></li>
+                    <li><a href="#">Hire Me</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <div class="app-container">
+
+        <h1><a href="https://www.copart.com/" target="_blank">Copart Total Cost Calculator</a></h1>
+
+        <p>Copart is an online car auction site with an odd fee structure that makes figuring out the total cost of a car difficult. This tool allows you to put in a buying price for a car and get the total costs after taxes and fees.</p>
+
+        <label for="sale-price">Sale Price</label>
+        <input type="number" step="50" name="sale-price" id="sale-price" value="0" min="0">
+
+        <h3>Total Cost</h3>
+        <span id="final-cost">$0</span>
+
+    </div>
+
+    <script type="text/python" id="copart_calc">
+        from browser import document, console
+
+        def tax_calculator(price):
+            return price * 0.06
+
+        def buyer_calculator(sale_price):
+            if sale_price < 1000:
+                if sale_price == 50:
+                    buyer = 45
+                elif sale_price < 200:
+                    buyer = 80
+                elif sale_price < 400:
+                    buyer = 120
+                elif sale_price < 500:
+                    buyer = 160
+                elif sale_price < 600:
+                    buyer = 185
+                elif sale_price < 700:
+                    buyer = 210
+                elif sale_price < 800:
+                    buyer = 230
+                elif sale_price < 900:
+                    buyer = 250
+                else:
+                    buyer = 275
+            elif sale_price < 2000:
+                if sale_price < 1200:
+                    buyer = 325
+                elif sale_price < 1300:
+                    buyer = 350
+                elif sale_price < 1400:
+                    buyer = 365
+                elif sale_price < 1500:
+                    buyer = 380
+                elif sale_price < 1600:
+                    buyer = 390
+                elif sale_price < 1700:
+                    buyer = 410
+                elif sale_price < 1800:
+                    buyer = 420
+                else:
+                    buyer = 440
+            elif sale_price < 3000:
+                if sale_price < 2400:
+                    buyer = 470
+                elif sale_price < 2500:
+                    buyer = 480
+                elif sale_price < 2500:
+                    buyer = 480
+                else:
+                    buyer = 500
+            elif sale_price < 4000:
+                if sale_price < 3500:
+                    buyer = 600
+                else:
+                    buyer = 650
+            elif sale_price < 5000:
+                if sale_price < 4550:
+                    buyer = 675
+                else:
+                    buyer = 700
+            elif sale_price <= 6000:
+                large_fee = 7.5
+                buyer = 750 + (((sale_price - 5000) / 50) * large_fee)
+            else:
+                buyer = sale_price * 0.15
+
+            return buyer
+
+        def gate_fee_calculator():
+            return 59
+
+        def internet_fee_calculator(sale_price):
+            if sale_price == 50:
+                internet = 0
+            elif sale_price < 500:
+                internet = 39
+            elif sale_price < 1000:
+                internet = 49
+            elif sale_price < 1500:
+                internet = 69
+            elif sale_price < 2000:
+                internet = 79
+            elif sale_price < 4000:
+                internet = 89
+            elif sale_price < 6000:
+                internet = 99
+            else:
+                internet = 119
+            
+            return internet
+
+        def title_fee_calculator():
+            return 50
+
+        def calculate(e):
+            sale_price = int(document["sale-price"].value)
+            final_cost = sale_price
+
+            final_cost += tax_calculator(sale_price)
+            final_cost += buyer_calculator(sale_price)
+            final_cost += gate_fee_calculator()
+            final_cost += internet_fee_calculator(sale_price)
+            final_cost += title_fee_calculator()
+
+            document['final-cost'].textContent = "$" + str(final_cost) + "0"
+
+        document['sale-price'].bind('input', calculate)
+    
+    </script>
+    
+    <footer>
+
+        <a class="menu-text" href="/toolbox.html">Tool Menu</a>
+
+        <nav>
+            <ul>
+                <li><a class="tool" href="#">Audiobook Time Scaler</a></li>
+                <li><a class="tool" href="#">Copart Price Calculator</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+</html>

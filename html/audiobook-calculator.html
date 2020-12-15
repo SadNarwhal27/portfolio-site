@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/toolbox/audiobook calculator/audiobook-calculator-style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython.min.js"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython_stdlib.js"> </script>
+
+    <title>Audiobook Time Calculator</title>
+</head>
+<body onload="brython()">
+    
+    <div class="nav-container top">
+        <header>
+
+            <a href="/index.html" class="logo">Travis Schall</a>
+
+            <nav>
+                <ul>
+                    <li><a href="https://travisschall.com/index.html#my-work">My Work</a></li>
+                    <li><a href="https://travisschall.com/index.html#my-skills">My Skills</a></li>
+                    <li><a href="#">Hire Me</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <div class="app-container">
+
+        <h1>Audiobook Time Scale Calculator</h1>
+        <p>Put in the remaining hours and minutes of your audiobook along with the new playback speed multiplier</p>
+
+        <div class="input-area">
+
+            <div class="user-input">
+                <label for="hours">Total Hours</label>
+                <input type="number" placeholder="Hours" name="hours" id="hours" value=0 min="0">
+            </div>
+            
+            <div class="user-input">
+                <label for="minutes">Total Minutes</label>
+                <input type="number" placeholder="Minutes" name="minutes" id="minutes" value=0 min="0">
+            </div>
+            
+            <div class="user-input">
+                <label for="speed">Playback Speed</label>
+                <input type="number" step="0.01" value="1" min="0" placeholder="Speed Multiplier" name="speed" id="speed">
+            </div>
+    
+        </div>
+
+        <div class="listening-speed">
+
+            <h3>Listening Time Left:</h3>
+            <span id="timer">00:00</span>
+
+                <script type="text/python" id="time_calc">
+
+                    from browser import document
+
+                    def calculate_time(e):
+                        h = int(document['hours'].value)
+                        m = int(document['minutes'].value)
+                        s = float(document['speed'].value)   
+
+                        new_time = (m + (h * 60)) / s
+
+                        new_min = int(new_time % 60)
+
+                        new_hour = 0
+                        if new_time / 60 >= 1:
+                            new_hour = int(new_time / 60)
+                        
+                        if new_hour >= 10:
+                            time_output = str(new_hour) + ":"
+                        else:
+                            time_output = "0" + str(new_hour) + ":"
+
+                        if new_min >= 10:
+                            time_output += str(new_min)
+                        else:
+                            time_output += "0" + str(new_min)
+
+                        document['timer'].textContent = time_output
+
+                    
+                    document['hours'].bind('input', calculate_time)
+                    document['minutes'].bind('input', calculate_time)
+                    document['speed'].bind('input', calculate_time)
+                </script>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <a class="menu-text" href="/toolbox.html">Tool Menu</a>
+
+        <nav>
+            <ul>
+                <li><a class="tool" href="#">Audiobook Time Scaler</a></li>
+                <li><a class="tool" href="#">Copart Price Calculator</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+</html>

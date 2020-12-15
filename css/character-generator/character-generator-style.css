@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: grey;
+  padding: 2em;
+  margin-bottom: 50px;
+}
+
+.total-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12% auto;
+      grid-template-columns: 12% auto;
+}
+
+.randomizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  float: left;
+  background-color: grey;
+  padding: 1em;
+  height: 100%;
+}
+
+.character-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  margin-left: 3em;
+  background-color: #d6d6d6;
+  height: 100%;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.character-abilities-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  margin: 1em;
+}
+
+.character-abilities-container .ability-container {
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid black;
+  border-top-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  background: white;
+  padding: 1em;
+  text-align: center;
+}
+
+.character-abilities-container .ability-container .ability-name {
+  font-weight: bold;
+  margin-top: -0.8em;
+}
+
+.character-abilities-container .ability-container .ability-score {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.character-abilities-container .ability-container .ability-modifier-container {
+  border: 1px solid black;
+  margin-bottom: -1em;
+  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.character-abilities-container .ability-container .ability-modifier-container .ability-modifier {
+  font-weight: bold;
+}
+
+.character-skills_throws-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 33% auto;
+      grid-template-rows: 33% auto;
+  grid-gap: 1em;
+  margin: 1em;
+  width: 30%;
+}
+
+.character-skills_throws-container .throws-container, .character-skills_throws-container .skills-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 5%;
+      grid-template-rows: auto 5%;
+  grid-gap: 0.5em;
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+.character-skills_throws-container .throws-container .skills, .character-skills_throws-container .skills-container .skills {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.2em;
+}
+
+.character-skills_throws-container .throws-container .skills .skill, .character-skills_throws-container .skills-container .skills .skill {
+  font-size: 1.12rem;
+}
+
+.character-skills_throws-container .throws-container .skills input[type="checkbox"], .character-skills_throws-container .skills-container .skills input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+.character-skills_throws-container .throws-container .throws, .character-skills_throws-container .skills-container .throws {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5em;
+}
+
+.character-skills_throws-container .throws-container .throws .throw, .character-skills_throws-container .skills-container .throws .throw {
+  font-size: 1.3rem;
+}
+
+.character-skills_throws-container .throws-container .throws input[type="checkbox"], .character-skills_throws-container .skills-container .throws input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+.character-skills_throws-container .throws-container .throws-container-name, .character-skills_throws-container .throws-container .skills-container-name, .character-skills_throws-container .skills-container .throws-container-name, .character-skills_throws-container .skills-container .skills-container-name {
+  text-align: center;
+  font-weight: bold;
+}
+/*# sourceMappingURL=character-generator-style.css.map */

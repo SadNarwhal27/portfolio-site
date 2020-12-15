@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  background: lightgray;
+}
+
+header .logo {
+  font-weight: bold;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul a {
+  display: block;
+  padding: 0 1em;
+}
+
+.app-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1f)[auto];
+      grid-template-rows: repeat(auto, 1f);
+  text-align: center;
+  background: lightblue;
+  margin: 10% auto;
+  max-width: 60%;
+  max-height: 50%;
+}
+
+.app-container h1 {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+}
+
+.app-container p {
+  margin-top: -1em;
+  padding: 0 1em;
+}
+
+.app-container .input-area {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+}
+
+.app-container .input-area .user-input {
+  padding: 1em;
+}
+
+.app-container .input-area .user-input input {
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.app-container .listening-speed {
+  display: -ms-grid;
+  display: grid;
+  margin: 1em auto;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  background: lightgray;
+}
+
+footer .menu-text {
+  font-weight: bold;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 2em;
+}
+
+footer ul a {
+  display: block;
+  padding: 0 1em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .input-area {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  input {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .tool-menu {
+    max-width: 10em;
+    bottom: 350px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    min-height: 110vh;
+  }
+  .app-container {
+    max-width: 80%;
+    margin-top: 1.5em;
+  }
+  .app-container p {
+    padding-top: 10px;
+    margin-bottom: 0;
+  }
+  .app-container h1, .app-container .listening-speed {
+    margin: 0;
+    padding: 0.5em;
+  }
+  .app-container span {
+    margin-top: -0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+/*# sourceMappingURL=audiobook-calculator-style.css.map */

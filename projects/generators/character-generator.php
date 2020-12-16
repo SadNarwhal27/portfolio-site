@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/character-generator/character-generator-style.css">
+    <link rel="stylesheet" href="/css/character-generator/character-generator-style.css">
     <title>Character Generator</title>
 </head>
 <body>
@@ -100,9 +100,49 @@
 
                         <div class="throw">
 
-                            <div class="mod-select" id="str-throw-select"></div>
+                            <div class="mod-select" id="str-throw-select"><span class="select" id="str-select"></span></div>
                             <div class="throw-mod" id="str-mod">+2</div>
                             <div class="throw-name">Strength</div>
+                        
+                        </div>
+
+                        <div class="throw">
+
+                            <div class="mod-select" id="dex-throw-select"><span class="select" id="dex-select"></span></div>
+                            <div class="throw-mod" id="dex-mod">+2</div>
+                            <div class="throw-name">Dexterity</div>
+                        
+                        </div>
+
+                        <div class="throw">
+
+                            <div class="mod-select" id="con-throw-select"><span class="select" id="con-select"></span></div>
+                            <div class="throw-mod" id="con-mod">+2</div>
+                            <div class="throw-name">Constitution</div>
+                        
+                        </div>
+
+                        <div class="throw">
+
+                            <div class="mod-select" id="int-throw-select"><span class="select" id="int-select"></span></div>
+                            <div class="throw-mod" id="int-mod">+2</div>
+                            <div class="throw-name">Intelligence</div>
+                        
+                        </div>
+
+                        <div class="throw">
+
+                            <div class="mod-select" id="wis-throw-select"><span class="select" id="wis-select"></span></div>
+                            <div class="throw-mod" id="wis-mod">+2</div>
+                            <div class="throw-name">Wisdom</div>
+                        
+                        </div>
+
+                        <div class="throw">
+
+                            <div class="mod-select" id="cha-throw-select"><span class="select" id="cha-select"></span></div>
+                            <div class="throw-mod" id="cha-mod">+2</div>
+                            <div class="throw-name">Charisma</div>
                         
                         </div>
 
@@ -120,145 +160,145 @@
 
                             <div class="skill">
 
-                                <input type="checkbox" id="acrobatics-skill">
-                                <label class="skill-mod" id="acrobatics-mod" for="acrobatics-throw">+2</label>
-                                <label class="skill-name" for="acrobatics-throw">Acrobatics</label>
+                                <div class="skill-select" id="acr-throw-select"><span class="select" id="acr-select"></span></div>
+                                <div class="throw-mod" id="acr-mod">+2</div>
+                                <div class="throw-name">Acrobatics</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="anim-skill">
-                                <label class="skill-mod" id="anim-mod" for="anim-skill">+2</label>
-                                <label class="skill-name" for="anim-skill">Animal Handling</label>
+                                <div class="skill-select" id="ah-throw-select"><span class="select" id="ah-select"></span></div>
+                                <div class="throw-mod" id="ah-mod">+2</div>
+                                <div class="throw-name">Animal Handling</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="arc-skill">
-                                <label class="skill-mod" id="arc-mod" for="arc-skill">+2</label>
-                                <label class="skill-name" for="arc-skill">Arcana</label>
+                                <div class="skill-select" id="arc-throw-select"><span class="select" id="arc-select"></span></div>
+                                <div class="throw-mod" id="arc-mod">+2</div>
+                                <div class="throw-name">Arcana</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="ath-skill">
-                                <label class="skill-mod" id="ath-mod" for="ath-skill">+2</label>
-                                <label class="skill-name" for="ath-skill">Athletics</label>
+                                <div class="skill-select" id="ath-throw-select"><span class="select" id="ath-select"></span></div>
+                                <div class="throw-mod" id="ath-mod">+2</div>
+                                <div class="throw-name">Athletics</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="dec-skill">
-                                <label class="skill-mod" id="dec-mod" for="dec-skill">+2</label>
-                                <label class="skill-name" for="dec-skill">Deception</label>
+                                <div class="skill-select" id="dec-throw-select"><span class="select" id="dec-select"></span></div>
+                                <div class="throw-mod" id="dec-mod">+2</div>
+                                <div class="throw-name">Deception</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="his-skill">
-                                <label class="skill-mod" id="his-mod" for="his-skill">+2</label>
-                                <label class="skill-name" for="his-skill">History</label>
+                                <div class="skill-select" id="his-throw-select"><span class="select" id="his-select"></span></div>
+                                <div class="throw-mod" id="his-mod">+2</div>
+                                <div class="throw-name">History</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="ins-skill">
-                                <label class="skill-mod" id="ins-mod" for="ins-skill">+2</label>
-                                <label class="skill-name" for="ins-skill">Insight</label>
+                                <div class="skill-select" id="ins-throw-select"><span class="select" id="ins-select"></span></div>
+                                <div class="throw-mod" id="ins-mod">+2</div>
+                                <div class="throw-name">Insight</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="tim-skill">
-                                <label class="skill-mod" id="tim-mod" for="tim-skill">+2</label>
-                                <label class="skill-name" for="tim-skill">Intimidate</label>
+                                <div class="skill-select" id="intim-throw-select"><span class="select" id="intim-select"></span></div>
+                                <div class="throw-mod" id="intim-mod">+2</div>
+                                <div class="throw-name">Intimidation</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="ves-skill">
-                                <label class="skill-mod" id="ves-mod" for="ves-skill">+2</label>
-                                <label class="skill-name" for="ves-skill">Investigation</label>
+                                <div class="skill-select" id="inves-throw-select"><span class="select" id="inves-select"></span></div>
+                                <div class="throw-mod" id="inves-mod">+2</div>
+                                <div class="throw-name">Investigation</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="med-skill">
-                                <label class="skill-mod" id="med-mod" for="med-skill">+2</label>
-                                <label class="skill-name" for="med-skill">Medicine</label>
+                                <div class="skill-select" id="med-throw-select"><span class="select" id="med-select"></span></div>
+                                <div class="throw-mod" id="med-mod">+2</div>
+                                <div class="throw-name">Medicine</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="nat-skill">
-                                <label class="skill-mod" id="nat-mod" for="nat-skill">+2</label>
-                                <label class="skill-name" for="nat-skill">Nature</label>
+                                <div class="skill-select" id="nat-throw-select"><span class="select" id="nat-select"></span></div>
+                                <div class="throw-mod" id="nat-mod">+2</div>
+                                <div class="throw-name">Nature</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="perc-skill">
-                                <label class="skill-mod" id="perc-mod" for="perc-skill">+2</label>
-                                <label class="skill-name" for="perc-skill">Perception</label>
+                                <div class="skill-select" id="perc-throw-select"><span class="select" id="perc-select"></span></div>
+                                <div class="throw-mod" id="perc-mod">+2</div>
+                                <div class="throw-name">Perception</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="perf-skill">
-                                <label class="skill-mod" id="perf-mod" for="perf-skill">+2</label>
-                                <label class="skill-name" for="perf-skill">Performance</label>
+                                <div class="skill-select" id="perf-throw-select"><span class="select" id="perf-select"></span></div>
+                                <div class="throw-mod" id="perf-mod">+2</div>
+                                <div class="throw-name">Performance</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="pers-skill">
-                                <label class="skill-mod" id="pers-mod" for="pers-skill">+2</label>
-                                <label class="skill-name" for="pers-skill">Persuasion</label>
+                                <div class="skill-select" id="pers-throw-select"><span class="select" id="pers-select"></span></div>
+                                <div class="throw-mod" id="pers-mod">+2</div>
+                                <div class="throw-name">Persuasion</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="rel-skill">
-                                <label class="skill-mod" id="rel-mod" for="rel-skill">+2</label>
-                                <label class="skill-name" for="rel-skill">Religion</label>
+                                <div class="skill-select" id="rel-throw-select"><span class="select" id="rel-select"></span></div>
+                                <div class="throw-mod" id="rel-mod">+2</div>
+                                <div class="throw-name">Religion</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="soh-skill">
-                                <label class="skill-mod" id="soh-mod" for="soh-skill">+2</label>
-                                <label class="skill-name" for="soh-skill">Sleight of Hand</label>
+                                <div class="skill-select" id="soh-throw-select"><span class="select" id="soh-select"></span></div>
+                                <div class="throw-mod" id="soh-mod">+2</div>
+                                <div class="throw-name">Sleight of Hand</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="ste-skill">
-                                <label class="skill-mod" id="ste-mod" for="ste-skill">+2</label>
-                                <label class="skill-name" for="ste-skill">Stealth</label>
+                                <div class="skill-select" id="ste-throw-select"><span class="select" id="ste-select"></span></div>
+                                <div class="throw-mod" id="ste-mod">+2</div>
+                                <div class="throw-name">Stealth</div>    
 
                             </div>
 
                             <div class="skill">
 
-                                <input type="checkbox" id="sur-skill">
-                                <label class="skill-mod" id="sur-mod" for="sur-skill">+2</label>
-                                <label class="skill-name" for="sur-skill">Survival</label>
+                                <div class="skill-select" id="surv-throw-select"><span class="select" id="surv-select"></span></div>
+                                <div class="throw-mod" id="surv-mod">+2</div>
+                                <div class="throw-name">Survival</div>    
 
                             </div>
 

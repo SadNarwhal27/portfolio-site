@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap');
 
 $colors: (
-    nav-color: #6700EE,
-    primary-color: #6E00FF,
+    nav-color: #5e02d6, //6700EE
+    primary-color: #6e00ff,
     nav-accent-color: #00EEFF,
     skills-color: #FF64CB,
-    text-color: #252525
+    text-color: #252525,
+    hover-color: #d44da7
 );
+
 
 /* Creates the blank slate for you to work with later */
 body {
@@ -171,6 +173,53 @@ section {
 .portfolio-container a img {
     border-radius: 1em;
     margin-bottom: 2em;
+}
+
+.contact {
+    background: map-get($map: $colors, $key: primary-color);
+    color: map-get($map: $colors, $key: nav-accent-color);
+}
+
+.contact-area {
+    color: white;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 10em;
+    margin-top: -4em;
+    margin-bottom: -2em;
+
+    .contact-form {
+        margin-top: 6px;
+        padding: 20px;
+
+        input[type=text], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        textarea {
+            height: 200px;
+        }
+    
+        input[type=button] {
+            background-color: map-get($map: $colors, $key: skills-color);
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    
+        input[type=submit]:hover {
+            background-color: map-get($map: $colors, $key: hover-color);
+        }
+    }
 }
 
 /* Tablet View */

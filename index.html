@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travis Schall</title>
     <link rel="stylesheet" href="css/index/main.css">
+    <script src="/scripts/index-scripts/mail-manager.js"></script>
 </head>
 <body>
     
@@ -168,20 +169,47 @@
             <a href="toolbox.html"><img src="images/index-pictures/toolbox.PNG" alt=""></a>
         </div>
 
-        <!-- <div class="portfolio-container transition3">
+        <div class="portfolio-container transition3">
             <div class="portfolio-left">
                 <div class="inner">
 
-                    <p class="subtitle">Other Project</p>
-                    <p class="featured-title">Example Project</p>
-                    <p class="featured-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad atque quod consectetur, autem, rem obcaecati nesciunt nam vitae iure, placeat harum reiciendis labore. Delectus?</p>
+                    <p class="subtitle">Vanilla JS</p>
+                    <p class="featured-title">ToDo App</p>
+                    <p class="featured-desc">A simple ToDo app that allows users to save tasks in local browser storage.</p>
 
                 </div>
             </div>
-            <a href="#"><img src="images/index-pictures/standin-1.jpg" alt=""></a>
-        </div> -->
+            <a href="todo.html"><img src="images/index-pictures/todo.PNG" alt=""></a>
+        </div>
 
     </section>
+
+    <!-- <section class="contact">
+        <div class="contact-area">
+            <div class="contact-title transition4">
+                
+                <p>Feel free to send me a message at any time</p>
+                <img src="/images/index-pictures/face.jpg" alt="">
+            </div>
+
+            <div class="contact-form transition4">
+                <form action="" method="POST">
+                    <label for="name-field">Name</label>
+                    <input type="text" id="name-field" name="name-field" placeholder="Your name ...">
+    
+                    <label for="email-field">Email</label>
+                    <input type="text" id="email-field" name="email-field" placeholder="Your email ...">
+    
+                    <label for="message-field">Message</label>
+                    <textarea id="message-field" name="message-field" placeholder="Your message ..."></textarea>
+    
+                    <input type="button" onclick=loadDoc() value="Submit">
+                    
+                </form>
+            </div>
+
+        </div>
+    </section> -->
 
     <div class="nav-bottom">
         <footer>
@@ -257,6 +285,18 @@
             opacity: 0,
             duration: 1.2,
             stagger: 0.6
+        })
+
+        gsap.from(".transition4", {
+            scrollTrigger: {
+                trigger: '.transition4',
+                start: "top center"
+            },
+
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.2
         })
     </script>
 

@@ -21,7 +21,7 @@ img {
 }
 
 .nav-container, .nav-bottom {
-  background-color: #6700EE;
+  background-color: #5e02d6;
 }
 
 .nav-container a, .nav-bottom a {
@@ -59,7 +59,7 @@ header ul a, footer ul a {
 }
 
 .hero {
-  background: #6E00FF;
+  background: #6e00ff;
   color: white;
   display: -ms-grid;
   display: grid;
@@ -108,7 +108,7 @@ section {
 .subtitle {
   text-transform: uppercase;
   font-weight: bold;
-  color: #6E00FF;
+  color: #6e00ff;
   letter-spacing: 0.2em;
   font-size: 0.85em;
 }
@@ -136,7 +136,7 @@ section {
 }
 
 .skills {
-  background: #6700EE;
+  background: #5e02d6;
   /*background: #0892d0;*/
 }
 
@@ -176,6 +176,55 @@ section {
 .portfolio-container a img {
   border-radius: 1em;
   margin-bottom: 2em;
+}
+
+.contact {
+  background: #6e00ff;
+  color: #00EEFF;
+}
+
+.contact-area {
+  color: white;
+  font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto;
+      grid-template-columns: 40% auto;
+  grid-gap: 10em;
+  margin-top: -4em;
+  margin-bottom: -2em;
+}
+
+.contact-area .contact-form {
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.contact-area .contact-form input[type=text], .contact-area .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-area .contact-form textarea {
+  height: 200px;
+}
+
+.contact-area .contact-form input[type=button] {
+  background-color: #FF64CB;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-area .contact-form input[type=submit]:hover {
+  background-color: #d44da7;
 }
 
 /* Tablet View */
@@ -230,7 +279,7 @@ section {
     background: unset;
   }
   .nav-container header, .nav-container footer {
-    background: #6700EE;
+    background: #5e02d6;
   }
   header {
     padding: 2em 2em 2em 4em;
@@ -265,7 +314,7 @@ section {
     padding: 0;
   }
   .hero .content {
-    background: #6E00FF;
+    background: #6e00ff;
     padding: 6em 8em 6em 4em;
     text-align: left;
   }
